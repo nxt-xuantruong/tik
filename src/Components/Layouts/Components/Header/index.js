@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -21,6 +22,7 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import routesConfig from '~/config/routes';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -126,7 +128,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                        <img src={images.logo} alt="Tiktok" />
+                    </Link>
                 </div>
                 <Search />
                 <div className={cx('action')}>
@@ -158,7 +162,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/7655408f17439e66c13b21636f71844b.jpeg?x-expires=1697713200&x-signature=GU3MI7dQSd3QpVOO73q52w%2B5NHI%3D"
+                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/7655408f17439e66c13b21636f71844b.jpeg?x-expires=1698073200&x-signature=UvKV4KTxLK2jI4CRhKp6zP2PWsw%3D"
                                 alt=""
                             />
                         ) : (
