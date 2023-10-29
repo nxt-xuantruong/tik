@@ -3,7 +3,7 @@ import styles from './Search.module.scss';
 import { useEffect, useState, useRef } from 'react';
 
 import { useDebounce } from '~/hooks';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/Services/searchServices';
 
 import HeadlessTippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/Components/Popper';
